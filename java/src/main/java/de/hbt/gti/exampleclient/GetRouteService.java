@@ -21,6 +21,8 @@ public class GetRouteService {
     GRRequest grRequest = new GRRequest();
     grRequest.setStart(start);
     grRequest.setDest(dest);
+    grRequest.setLanguage("de");
+    grRequest.setVersion(53);
     GRResponse response = api.getRoute(grRequest);
     System.out.println(response);
     return response;

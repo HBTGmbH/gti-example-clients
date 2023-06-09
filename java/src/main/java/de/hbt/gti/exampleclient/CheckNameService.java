@@ -19,6 +19,8 @@ public class CheckNameService {
     ApiClient apiClient = apiClientService.getApiClient();
     CheckNameControllerApi api = new CheckNameControllerApi(apiClient);
     CNRequest req = new CNRequest();
+    req.setLanguage("de");
+    req.setVersion(53);
     SDName sdName = new SDName();
     sdName.setName(name);
     sdName.setType(TypeEnum.UNKNOWN);
