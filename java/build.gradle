@@ -1,0 +1,58 @@
+buildscript {
+	repositories {
+		maven {
+			url "https://plugins.gradle.org/m2/"
+		}
+	}
+	dependencies {
+		classpath "org.openapitools:openapi-generator-gradle-plugin:6.6.0"
+	}
+}
+
+plugins {
+	id 'java'
+	id 'org.openapi.generator' version '6.5.0'
+	id 'de.undercouch.download' version '5.4.0'
+}
+
+repositories {
+	mavenCentral()
+	mavenLocal()
+}
+
+group = 'de.hbt.gti'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+task downloadSpec(type: de.undercouch.gradle.tasks.download.Download) {
+	src 'https://gti.geofox.de/v3/api-docs.yaml/public'
+	dest buildDir
+	header('Accept', 'application/vnd.oai.openapi')
+}
+
+task generateGtiClient(type: org.openapitools.generator.gradle.plugin.tasks.GenerateTask, dependsOn: ['downloadSpec']) {
+	generatorName = "java"
+	inputSpec = "$buildDir/public".toString()
+	outputDir = "$buildDir/api-client-generated".toString()
+	apiPackage = "de.hbt.gti.example.client"
+	invokerPackage = "de.hbt.gti.example.invoker"
+	modelPackage = "de.hbt.gti.example.model"
+	configOptions = [
+			dateLibrary: "java8"
+	]
+	groupId = 'de.hbt.gti'
+	id = 'sample-client'
+	skipValidateSpec = true
+	logToStderr = true
+	generateAliasAsModel = false
+	enablePostProcessFile = false
+}
+
+task run(type: JavaExec) {
+	mainClass = "de.hbt.gti.exampleclient.ExampleClientApplication"
+	classpath = sourceSets.main.runtimeClasspath
+}
+
+dependencies {
+	implementation 'de.hbt.gti:sample-client:v0'
+}
