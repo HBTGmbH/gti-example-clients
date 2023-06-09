@@ -11,6 +11,10 @@ import okhttp3.Response;
 import okio.Buffer;
 import okio.ByteString;
 
+/**
+ * This class provides an ApiClient which creates HMAC signatures for the request.
+ * This is currently not supported by OpenAPI and had to be implemented additionally.
+ */
 public class ApiClientService {
   private final String gtiUser;
   private final ByteString gtiHmacSecret;
