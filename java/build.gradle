@@ -11,7 +11,7 @@ buildscript {
 
 plugins {
 	id 'java'
-	id 'org.openapi.generator' version '6.5.0'
+	id 'org.openapi.generator' version '6.6.0'
 	id 'de.undercouch.download' version '5.4.0'
 }
 
@@ -39,6 +39,9 @@ task generateGtiClient(type: org.openapitools.generator.gradle.plugin.tasks.Gene
 	modelPackage = "de.hbt.gti.example.model"
 	configOptions = [
 			dateLibrary: "java8"
+	]
+	typeMappings = [
+		OffsetDateTime:"String"
 	]
 	groupId = 'de.hbt.gti'
 	id = 'sample-client'
