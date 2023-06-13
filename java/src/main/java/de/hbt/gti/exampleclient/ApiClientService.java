@@ -2,7 +2,7 @@ package de.hbt.gti.exampleclient;
 
 import static java.util.Optional.ofNullable;
 
-import de.hbt.gti.example.invoker.ApiClient;
+import de.hbt.gti.invoker.ApiClient;
 import java.io.IOException;
 import okhttp3.Interceptor.Chain;
 import okhttp3.OkHttpClient;

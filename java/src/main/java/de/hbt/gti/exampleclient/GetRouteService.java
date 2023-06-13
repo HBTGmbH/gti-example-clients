@@ -1,11 +1,11 @@
 package de.hbt.gti.exampleclient;
 
-import de.hbt.gti.example.client.GetRouteControllerApi;
-import de.hbt.gti.example.invoker.ApiClient;
-import de.hbt.gti.example.invoker.ApiException;
-import de.hbt.gti.example.model.GRRequest;
-import de.hbt.gti.example.model.GRResponse;
-import de.hbt.gti.example.model.SDName;
+import de.hbt.gti.client.GetRouteControllerApi;
+import de.hbt.gti.invoker.ApiClient;
+import de.hbt.gti.invoker.ApiException;
+import de.hbt.gti.model.GRRequest;
+import de.hbt.gti.model.GRResponse;
+import de.hbt.gti.model.SDName;
 
 public class GetRouteService {
   private final ApiClientService apiClientService;

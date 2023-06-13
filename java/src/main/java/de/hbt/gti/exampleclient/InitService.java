@@ -1,10 +1,10 @@
 package de.hbt.gti.exampleclient;
 
-import de.hbt.gti.example.client.InitRequestControllerApi;
-import de.hbt.gti.example.invoker.ApiClient;
-import de.hbt.gti.example.invoker.ApiException;
-import de.hbt.gti.example.model.InitRequest;
-import de.hbt.gti.example.model.InitResponse;
+import de.hbt.gti.client.InitRequestControllerApi;
+import de.hbt.gti.invoker.ApiClient;
+import de.hbt.gti.invoker.ApiException;
+import de.hbt.gti.model.InitRequest;
+import de.hbt.gti.model.InitResponse;
 
 public class InitService {
 

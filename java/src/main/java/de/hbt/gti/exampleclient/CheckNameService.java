@@ -1,12 +1,12 @@
 package de.hbt.gti.exampleclient;
 
-import de.hbt.gti.example.client.CheckNameControllerApi;
-import de.hbt.gti.example.invoker.ApiClient;
-import de.hbt.gti.example.invoker.ApiException;
-import de.hbt.gti.example.model.CNRequest;
-import de.hbt.gti.example.model.CNResponse;
-import de.hbt.gti.example.model.SDName;
-import de.hbt.gti.example.model.SDName.TypeEnum;
+import de.hbt.gti.client.CheckNameControllerApi;
+import de.hbt.gti.invoker.ApiClient;
+import de.hbt.gti.invoker.ApiException;
+import de.hbt.gti.model.CNRequest;
+import de.hbt.gti.model.CNResponse;
+import de.hbt.gti.model.SDName;
+import de.hbt.gti.model.SDName.TypeEnum;
 
 public class CheckNameService {
   private final ApiClientService apiClientService;

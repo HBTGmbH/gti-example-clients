@@ -1,11 +1,11 @@
 package de.hbt.gti.exampleclient;
 
-import de.hbt.gti.example.invoker.ApiException;
-import de.hbt.gti.example.model.CNResponse;
-import de.hbt.gti.example.model.InitResponse;
-import de.hbt.gti.example.model.RegionalSDName;
-import de.hbt.gti.example.model.SDName;
-import de.hbt.gti.example.model.SDName.TypeEnum;
+import de.hbt.gti.invoker.ApiException;
+import de.hbt.gti.model.CNResponse;
+import de.hbt.gti.model.InitResponse;
+import de.hbt.gti.model.RegionalSDName;
+import de.hbt.gti.model.SDName;
+import de.hbt.gti.model.SDName.TypeEnum;
 
 public class ExampleClientApplication {
 
