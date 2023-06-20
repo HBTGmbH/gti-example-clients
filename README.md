@@ -7,6 +7,10 @@ You will need credentials to access the API: https://www.hvv.de/de/fahrplaene/ab
 A sample Java client 
 [Java client](java/README.md)
 
+## PHP
+A sample PHP client 
+[PHP client](php/README.md)
+
 
 ## Documentation
 * https://gti.geofox.de/

@@ -1,0 +1,38 @@
+version: "3"
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: nginx/Dockerfile
+    ports: 
+      - "8080:80"
+    networks:
+      - internal
+    volumes:
+      - build:/var/www/html
+  php:
+    build:
+      context: .
+      dockerfile: php/Dockerfile
+    environment:
+      - GTI_USER=$GTI_USER
+      - GTI_HMAC_SECRET=$GTI_HMAC_SECRET
+    networks:
+      - internal
+    volumes:
+      - build:/var/www/html
+  composer:
+    image: composer:1.9
+    command:
+      - composer
+      - install
+    volumes:
+     - ./composer.json:/app/composer.json
+     - build:/app
+networks:
+  internal:
+    driver: bridge
+volumes:
+  build:
+    external: true
+    name: php_build
