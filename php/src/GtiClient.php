@@ -28,5 +28,3 @@ class GtiClient {
         return base64_encode(hash_hmac("sha1", $payload, $this->gtiHmacSecret, true));
     }
 }
-
-?>
