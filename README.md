@@ -11,6 +11,10 @@ A sample Java client
 A sample PHP client 
 [PHP client](php/README.md)
 
+## Python
+A sample Python client
+[Python client](python/README.md)
+
 
 ## Documentation
 * https://gti.geofox.de/
